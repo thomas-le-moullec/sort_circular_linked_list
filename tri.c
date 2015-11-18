@@ -5,7 +5,7 @@
 ** Login   <le-mou_t@epitech.net>
 ** 
 ** Started on  Mon Nov 16 16:56:32 2015 Thomas LE MOULLEC
-** Last update Wed Nov 18 09:07:21 2015 Thomas LE MOULLEC
+** Last update Wed Nov 18 11:28:02 2015 Thomas LE MOULLEC
 */
 
 #include <stdlib.h>
@@ -26,10 +26,8 @@ void	push_fusion(t_chaine *l_a, t_chaine *l_b)
 	    {
 	      swap_elem(l_a);
 	      a = 0;
-	      //      write(1, "sa ", 3);
 	    }
 	  l_b = pb(&l_a, l_b);
-	  //write(1, "pb ", 3);
 	}
       l_a = NULL;
       a = push_terminator(&l_a, &l_b, a);
@@ -46,10 +44,8 @@ int	push_terminator(t_chaine **l_a, t_chaine **l_b, int a)
 	{
 	  swap_elem((*l_b));
 	  a = 0;
-	  //write(1, "sb ", 3);
 	}
       (*l_a) = pa(l_b, (*l_a));
-      // write(1, "pa ", 3);
     }
   return (a);
 }

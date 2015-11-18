@@ -5,7 +5,7 @@
 ** Login   <le-mou_t@epitech.net>
 ** 
 ** Started on  Thu Nov 12 17:47:22 2015 Thomas LE MOULLEC
-** Last update Wed Nov 18 09:56:04 2015 Thomas LE MOULLEC
+** Last update Wed Nov 18 11:27:33 2015 Thomas LE MOULLEC
 */
 
 #include <stdlib.h>
@@ -23,20 +23,12 @@ void	swap_elem(t_chaine *l_a)
 
 t_chaine	*rrotate(t_chaine *l_a)
 {
-  /*l_a = add_elem_begin(l_a, l_a->prev->data);
-  l_a->prev->prev->next = l_a;
-  l_a->prev = l_a->prev->prev;
-  */
   l_a = l_a->prev;
   return (l_a);
 }
 
 t_chaine	*rotate(t_chaine *l_a)
 {
-  /*l_a = add_elem_end(l_a, l_a->data);
-  l_a->prev->next = l_a->next;
-  l_a->next->prev = l_a->prev;
-  l_a = l_a->next;*/
   l_a = l_a->next;
   return (l_a);
 }

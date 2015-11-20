@@ -5,7 +5,7 @@
 ** Login   <le-mou_t@epitech.net>
 ** 
 ** Started on  Thu Nov 12 17:47:22 2015 Thomas LE MOULLEC
-** Last update Wed Nov 18 11:27:33 2015 Thomas LE MOULLEC
+** Last update Fri Nov 20 23:37:23 2015 Thomas LE MOULLEC
 */
 
 #include <stdlib.h>
@@ -69,16 +69,20 @@ int	main(int ac, char **av)
   t_chaine	*l_b;
   int		i;
 
-  if (ac <= 1)
+  if (ac < 1)
     return (1);
-  l_a = NULL;
-  l_b = NULL;
-  i = 1;
-  while (ac > 1)
+  if (ac > 1)
     {
-      l_a = add_elem_end(l_a, my_get_nbr(av[i]));
-      i++;
-      ac--;
+      l_a = NULL;
+      l_b = NULL;
+      i = 1;
+      while (ac > 1)
+	{
+	  l_a = add_elem_end(l_a, my_get_nbr(av[i]));
+	  i++;
+	  ac--;
+	}
+      push_fusion(l_a, l_b);
     }
-  push_fusion(l_a, l_b);
+  my_putchar('\n');
 }

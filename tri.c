@@ -5,7 +5,7 @@
 ** Login   <le-mou_t@epitech.net>
 ** 
 ** Started on  Mon Nov 16 16:56:32 2015 Thomas LE MOULLEC
-** Last update Wed Nov 18 11:28:02 2015 Thomas LE MOULLEC
+** Last update Fri Nov 20 23:38:29 2015 Thomas LE MOULLEC
 */
 
 #include <stdlib.h>
@@ -25,9 +25,11 @@ void	push_fusion(t_chaine *l_a, t_chaine *l_b)
 	  if (l_a->data > l_a->next->data)
 	    {
 	      swap_elem(l_a);
+	      write(1, "sa ", 3);
 	      a = 0;
 	    }
 	  l_b = pb(&l_a, l_b);
+	  write(1, "pb ", 3);
 	}
       l_a = NULL;
       a = push_terminator(&l_a, &l_b, a);
@@ -43,9 +45,32 @@ int	push_terminator(t_chaine **l_a, t_chaine **l_b, int a)
       if ((*l_b)->data < (*l_b)->next->data)
 	{
 	  swap_elem((*l_b));
+	  write(1, "sb ", 3);
 	  a = 0;
 	}
       (*l_a) = pa(l_b, (*l_a));
+      if (a == 1 && ((*l_b)->data == 0))
+	write (1, "pa", 2);
+      else
+	write (1, "pa ", 3);
     }
   return (a);
+}
+
+int	check_str(char *str)
+{
+  int	i;
+  int	check;
+
+  check = 0;
+  i = 0;
+  if (str[i] == '-')
+    i++;
+  while (str[i] != '\0')
+    {
+      if (str[i] < '0' || str[i] > '0')
+	check = 1;
+      i++;
+    }
+  return (check);
 }

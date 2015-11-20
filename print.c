@@ -5,7 +5,7 @@
 ** Login   <le-mou_t@epitech.net>
 ** 
 ** Started on  Mon Nov 16 11:33:30 2015 Thomas LE MOULLEC
-** Last update Wed Nov 18 09:04:25 2015 Thomas LE MOULLEC
+** Last update Fri Nov 20 23:16:04 2015 Thomas LE MOULLEC
 */
 
 #include "struct.h"
@@ -34,7 +34,6 @@ void    disp_elem(t_chaine *l_a, int id)
   while (c != l_a->id)
     {
       c = id - 1;
-      printf("%d ", l_a->data);
       l_a = l_a->next;
     }
 }

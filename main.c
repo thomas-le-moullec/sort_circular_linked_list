@@ -5,21 +5,12 @@
 ** Login   <le-mou_t@epitech.net>
 ** 
 ** Started on  Thu Nov 12 17:47:22 2015 Thomas LE MOULLEC
-** Last update Fri Nov 20 23:37:23 2015 Thomas LE MOULLEC
+** Last update Sun Nov 22 16:06:37 2015 Thomas LE MOULLEC
 */
 
 #include <stdlib.h>
 #include "struct.h"
 #include "pushswap.h"
-
-void	swap_elem(t_chaine *l_a)
-{
-  int	d;
-
-  d = l_a->data;
-  l_a->data = l_a->next->data;
-  l_a->next->data = d;
-}
 
 t_chaine	*rrotate(t_chaine *l_a)
 {
@@ -69,20 +60,25 @@ int	main(int ac, char **av)
   t_chaine	*l_b;
   int		i;
 
-  if (ac < 1)
-    return (1);
-  if (ac > 1)
+  l_a = NULL;
+  l_b = NULL;
+  i = 1;
+  while (ac > 1)
     {
-      l_a = NULL;
+      l_a = add_elem_end(l_a, my_get_nbr(av[i]));
+      l_b = add_elem_end(l_b, my_get_nbr(av[i]));
+      i++;
+      ac--;
+    }
+  while (l_a->data < l_a->next->data)
+    l_a = l_a->next;
+  l_a = l_a->next;
+  if (l_a->data != l_b->data)
+    {
+      l_a = l_b;
       l_b = NULL;
-      i = 1;
-      while (ac > 1)
-	{
-	  l_a = add_elem_end(l_a, my_get_nbr(av[i]));
-	  i++;
-	  ac--;
-	}
-      push_fusion(l_a, l_b);
+      push_fusion(l_a, l_b, i - 1);
     }
   my_putchar('\n');
+  return (0);
 }

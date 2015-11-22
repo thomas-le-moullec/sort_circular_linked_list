@@ -5,28 +5,29 @@
 ## Login   <le-mou_t@epitech.net>
 ## 
 ## Started on  Mon Nov 16 13:10:05 2015 Thomas LE MOULLEC
-## Last update Wed Nov 18 11:24:39 2015 Thomas LE MOULLEC
+## Last update Sun Nov 22 17:03:34 2015 Thomas LE MOULLEC
 ##
 
-RM              = rm -f
+RM              = rm -rf
 
 CC		= gcc
 
-SRCS            = main.c  \
-		  add.c   \
-		  print.c \
-		  tri.c
+SRCS            = main.c       \
+		  add.c        \
+		  tri.c        \
+		  my_putchar.c \
+		  my_get_nbr.c
 
 OBJS            = $(SRCS:.c=.o)
 
 NAME            = push_swap
 
-LIB		= -L ../../my/ -lmy
+CFLAGS          = -W -Wall -Wextra -Werror
 
 all:            $(NAME)
 
 $(NAME):	$(OBJS)
-		$(CC) -o $(NAME) $(OBJS) $(LIB) -I.
+		$(CC) -o $(NAME) $(OBJS) -I. 
 
 clean:
 		$(RM) $(OBJS)

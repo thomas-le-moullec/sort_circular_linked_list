@@ -5,13 +5,29 @@
 ** Login   <le-mou_t@epitech.net>
 ** 
 ** Started on  Mon Nov 16 16:56:32 2015 Thomas LE MOULLEC
-** Last update Sun Nov 22 16:46:10 2015 Thomas LE MOULLEC
+** Last update Sun Nov 22 17:32:04 2015 Thomas LE MOULLEC
 */
 
 #include <stdlib.h>
 #include <unistd.h>
 #include "struct.h"
 #include "pushswap.h"
+
+int	check_str(t_chaine *l_a, int cmpt)
+{
+  int	i;
+
+  i = 0;
+  while (cmpt - 1 > 1)
+    {
+      if ((l_a->data) > (l_a->next->data))
+	return (i);
+      l_a = l_a->next;
+      cmpt--;
+    }
+  i = 1;
+  return (i);
+}
 
 void	push_fusion(t_chaine *l_a, t_chaine *l_b, int ac)
 {

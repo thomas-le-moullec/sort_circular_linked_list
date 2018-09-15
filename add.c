@@ -1,8 +1,8 @@
 /*
-** add.c for add.c in /home/le-mou_t/rendu/CPE_2015_Pushswap
+**
 ** 
 ** Made by Thomas LE MOULLEC
-** Login   <le-mou_t@epitech.net>
+**
 ** 
 ** Started on  Mon Nov 16 11:23:53 2015 Thomas LE MOULLEC
 ** Last update Wed Nov 18 10:02:12 2015 Thomas LE MOULLEC

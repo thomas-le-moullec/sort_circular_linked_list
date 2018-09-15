@@ -1,8 +1,6 @@
 /*
-** main.c for main.c in /home/le-mou_t/rendu/CPE_2015_Pushswap
 ** 
 ** Made by Thomas LE MOULLEC
-** Login   <le-mou_t@epitech.net>
 ** 
 ** Started on  Thu Nov 12 17:47:22 2015 Thomas LE MOULLEC
 ** Last update Sun Nov 22 17:31:41 2015 Thomas LE MOULLEC

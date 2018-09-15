@@ -1,8 +1,6 @@
 /*
-** my_get_nbr2.c for my_get_nbr2.c in /home/le-mou_t/rendu/Ex
 ** 
 ** Made by Thomas LE MOULLEC
-** Login   <le-mou_t@epitech.net>
 ** 
 ** Started on  Thu Oct 15 14:27:19 2015 Thomas LE MOULLEC
 ** Last update Thu Oct 15 17:32:02 2015 Thomas LE MOULLEC

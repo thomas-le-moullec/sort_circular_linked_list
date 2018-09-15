@@ -1,8 +1,6 @@
 /*
-** pushswap.h for pushswap.h in /home/le-mou_t/rendu/CPE_2015_Pushswap
 ** 
 ** Made by Thomas LE MOULLEC
-** Login   <le-mou_t@epitech.net>
 ** 
 ** Started on  Thu Nov 12 16:29:32 2015 Thomas LE MOULLEC
 ** Last update Sun Nov 22 17:12:59 2015 Thomas LE MOULLEC
